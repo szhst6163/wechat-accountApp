@@ -1,0 +1,15 @@
+<form bindsubmit="formSubmit">
+    <view hidden='{{modalHidden}}'>
+        <view class='mask_layer' bindtap='modal_click_Hidden'/>
+        <view class='modal_box'>
+            <view class="title">{{modalMsg}}</view>
+            <view class='content'>
+                <input class="weui-input" value='{{input}}' name="input" type="number" placeholder="输入金额"/>
+            </view>
+            <view class='btn'>
+                <view bindtap='modal_click_Hidden' class='cancel'>取消</view>
+                <button formType="submit" class='Sure'>确定</button>
+            </view>
+        </view>
+    </view>
+</form>

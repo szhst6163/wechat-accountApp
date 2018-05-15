@@ -1,0 +1,28 @@
+<view class="index-bd">
+    <view class="kind-list">
+        <block>
+            <view class="kind-list-item">
+                <view bindtap="hideList" data-isShow="{{isShow}}" class="kind-list-item-hd">
+                    <view class="kind-list-text">支出明细</view>
+                        <image class="kind-list-img" src="../../resources/kind/form.png"></image>
+                </view>
+                <view class="kind-list-item-bd kind-list-item-bd-show">
+                    <view class="moneyList navigator-box-show">
+                        <block wx:for="{{data}}" wx:if="{{(item.date == selectedDate||!selectedDate)&&isShow}}" wx:key="*item">
+                            <view class="moneyList-date">{{item.date}}</view>
+                            <view class="moneyItem" data-id="{{index}}">
+                                <view class="text">{{item.buyType}}</view>
+                                <view class="num">￥{{item.value}}</view>
+                                <!--<image class="kind-list-img err" src="../../resources/kind/err.png"></image>-->
+                            </view>
+                        </block>
+                        <!--<view style="color:dodgerblue" class="moneyItem">
+                            <view class="text">总额</view>
+                            <view class="num">￥{{total}}</view>
+                        </view>-->
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

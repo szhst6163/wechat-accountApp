@@ -1,0 +1,38 @@
+<view class="index">
+    <modal bind:action="init" formType='money' date="{{selectedDate}}" class="dialog" modal-hidden="{{is_modal_Hidden}}" datatype="{{datatype}}" modal-msg="{{is_modal_Msg}}"></modal>
+    <view class="index-hd">
+        <image class="index-logo" src="resources/kind/menu-price.png"></image>
+        <picker class="index-picker" mode="date" start="2018-01-01" end="{{defDate}}" bindchange="bindDateChange">
+            <view class="index-desc">{{selectedDate||"选择查账日期"}}</view>
+        </picker>
+        <image wx:if="{{selectedDate}}" bindtap='clearDate' class="kind-list-img err" src="resources/kind/err.png"></image>
+    </view>
+    <view class="index-bd">
+        <view class="kind-list">
+            <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+                <view class="kind-list-item">
+                    <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+                        <view class="kind-list-text">{{item.name}}</view>
+                        <image class="kind-list-img" src="resources/kind/view.png"></image>
+                    </view>
+                    <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+                        <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+                           <!-- <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+                                <view class="navigator-text" bindtap='modalShow' data-name="{{page}}">{{page}}</view>
+                            </block>-->
+                            <button bindtap='modalShow' data-datatype="out" data-name="支出" class="mini-btn" type="primary" size="mini">支出</button>
+                            <button bindtap='modalShow' data-datatype="income" data-name="收入" class="mini-btn" type="warn" size="mini">收入</button>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <payList bind:dateChange="dateChange" selectedDate="{{selectedDate}}" data="{{payList}}"></payList>
+    <view class="container">
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+    </view>
+    <view class="kind-list">
+        <button bindtap="clearStorage" type="warn">清除数据</button>
+    </view>
+</view>

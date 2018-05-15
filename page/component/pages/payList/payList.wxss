@@ -1,0 +1,28 @@
+@import "../../../common/index.wxss";
+.navigator-text{
+  margin:10rpx;
+  text-align:center;
+  border:1px dashed #ddd;
+  border-radius: 20rpx;
+  padding:15rpx;
+  color:cornflowerblue;
+}
+.moneyList{
+  position:relative;
+  background-color:#FFFFFF;
+  line-height:1.41176471;
+  font-size:34rpx;
+  transition:.3s;
+  padding:30rpx;
+}
+.moneyList .moneyItem{
+  display: flex;
+  padding:20rpx;
+  border-bottom:1px dashed #ddd;
+  font-size:24rpx;
+  justify-content:space-between;
+
+}
+.moneyList-date{
+  margin-top:10rpx;
+}

@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "记账吧",
+    "usingComponents": {
+      "modal": "./pages/modal/modal",
+      "payList": "./pages/payList/payList",
+      "ec-canvas":"../common/lib/ec-canvas/ec-canvas"
+    }
+}
