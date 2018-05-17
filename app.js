@@ -2,7 +2,11 @@ const openIdUrl = require('./config').openIdUrl
 
 App({
   onLaunch: function () {
-    console.log('App Launch!')
+    wx.login({
+        success(res){
+
+        }
+    })
   },
   onShow: function () {
     console.log('App Show')
