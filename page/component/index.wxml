@@ -1,7 +1,7 @@
 <view class="index">
     <modal bind:action="init" formType='money' date="{{selectedDate}}" class="dialog" modal-hidden="{{is_modal_Hidden}}" datatype="{{datatype}}" modal-msg="{{is_modal_Msg}}"></modal>
     <view class="index-hd">
-        <image class="index-logo" src="resources/kind/menu-price.png"></image>
+        <image class="index-logo" src="{{imgSrc}}"></image>
         <picker class="index-picker" mode="date" start="2018-01-01" end="{{defDate}}" bindchange="bindDateChange">
             <view class="index-desc">{{selectedDate||"选择查账日期"}}</view>
         </picker>
