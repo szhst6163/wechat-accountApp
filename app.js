@@ -23,7 +23,7 @@ App({
     var self = this
 
     if (self.globalData.openid) {
-      callback(null, self.globalData.openid);
+      callback(null, self.globalData.openid)
     } else {
       wx.login({
         success: function(data) {
