@@ -1,4 +1,4 @@
-const openIdUrl = require('./config').openIdUrl;
+const openIdUrl = require('./config').openIdUrl;//
 
 App({
   onLaunch: function () {
