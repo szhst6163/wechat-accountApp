@@ -131,6 +131,7 @@ Page({
             data.series[0].data.push(total);
         });
         data.xAxis.data = arr;
+        this.setData({total:total});
         this.chart.setOption(data)
     },
     initChart() {

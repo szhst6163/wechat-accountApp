@@ -7,11 +7,14 @@ Component({
         selectedDate: {
             type: String,
             value: ""
+        },
+        total:{
+            type: [String,Number],
+            value: 0
         }
     },
     data: {
         isShow:true,
-        total:0
     },
     methods: {
         totalNum(){

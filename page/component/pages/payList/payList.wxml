@@ -3,7 +3,7 @@
         <block>
             <view class="kind-list-item">
                 <view bindtap="hideList" data-isShow="{{isShow}}" class="kind-list-item-hd">
-                    <view class="kind-list-text">支出明细</view>
+                    <view class="kind-list-text">支出明细  [总计：{{total}}]</view>
                         <image class="kind-list-img" src="../../resources/kind/form.png"></image>
                 </view>
                 <view class="kind-list-item-bd kind-list-item-bd-show">
